@@ -1,6 +1,6 @@
 # Minitest::Mock::Easily
 
-TODO: Write a gem description
+use MiniTest::Mock with easier API
 
 ## Installation
 
@@ -18,7 +18,17 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+```
+include MockEasily
+
+m = mock do
+  expect :hello, 'hello'
+  expect :world, 'world'
+end
+
+assert_equal 'hello', m.hello
+assert_equal 'world', m.world
+```
 
 ## Contributing
 
